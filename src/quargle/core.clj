@@ -1,5 +1,6 @@
 (ns quargle.core
   (:require [clojure.java.io :as io]
+            [clojure-csv.core :as csv]
             [quargle.constant :as q]))
 
 (defn process-test-file 
@@ -7,7 +8,7 @@
   [f inputfile outputfile]
   (with-open [in (java.io.BufferedReader. (java.io.FileReader. inputfile))
               out (io/writer outputfile)]
-    (let [seq (rest (line-seq in))  ; skip the header line
+    (let [seq (rest (csv/parse-csv in))  ; skip the header line
           output-header (str "test_id,is_duplicate\r\n")
           write-header (.write out output-header)]
       (loop [s seq]
