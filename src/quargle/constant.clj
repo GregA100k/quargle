@@ -2,6 +2,6 @@
   (:require [clojure.string :as s]))
 
 (defn process
-  "take a vector of data representing the delimited input data"
+  "take a vector of data representing the delimited input data return a vector of the row number and the result"
   [w]
-  (str (first w) "," "1"))
+  [(first w)  0])
