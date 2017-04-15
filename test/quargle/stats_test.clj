@@ -24,5 +24,5 @@
     (let [stats (sc/reset)
           i (sc/increment 0 0)
          ]
-      (is (= (sc/print-stats) "0 :: 1 correct, 0 incorrect\r\n1 :: 0 correct, 0 incorrect\r\n"))
+      (is (= (sc/print-stats) "0 :: 1 correct, 0 incorrect  1.0%\r\n1 :: 0 correct, 0 incorrect  NaN%\r\ntotal percentage correct 1.0"))
   )))
