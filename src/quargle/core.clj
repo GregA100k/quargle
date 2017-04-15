@@ -1,7 +1,7 @@
 (ns quargle.core
   (:require [clojure.java.io :as io]
             [clojure-csv.core :as csv]
-            [quargle.stats :as q]
+            [quargle.comparison :as q]
             [quargle.stats :as sc]))
 
 (defn process-test-file 
