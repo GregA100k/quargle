@@ -1,7 +1,10 @@
 (ns quargle.comparison
-  (:require [quargle.compare.exact]))
+  (:require [quargle.compare.exact]
+            [quargle.compare.phrasecompare]
+  ))
 
-(def comparisons [quargle.compare.exact/process]
+(def comparisons [quargle.compare.exact/process
+                  quargle.compare.phrasecompare/process]
   )
 
 (defn process 
